@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Arial Elijah - Gallery</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" type="image/png" href="camera.png">
+    <style>
+        .slideshow {
+            width: 100%;
+            max-width: 300px;
+            margin: 30px auto;
+        }
+
+        .slideshow img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+    <script>
+        let currentSlide = 0;
+        function showSlide() {
+            const images = ["arielsukma.jpg", "newariel.jpg", "ariel1.jpg"];
+            document.getElementById("slideshow-img").src = images[currentSlide];
+            currentSlide = (currentSlide + 1) % images.length;
+        }
+        setInterval(showSlide, 3000); // Change every 3 seconds
+
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Gallery</h1>
+    </header>
+
+    <nav>
+    <a href="index.html" target="_blank">Home</a> |
+    <a href="education.html" target="_blank">Education</a> |
+    <a href="achievements.html" target="_blank">Achievements</a> |
+    <a href="gallery.html" target="_blank">Gallery</a> |
+    <a href="contact.html" target="_blank">Contact</a>
+</nav>
+
+<section class="slideshow">
+    <img id="slideshow-img" src="slide1.jpg" alt="Slideshow Image">
+</section>
+
+    <section class="gallery-grid">
+        <img src="examplecouple1.jpg" alt="Gallery Photo 1">
+        <img src="new2.jpg" alt="Gallery Photo 2">
+        <img src="new5.jpg" alt="Gallery Photo 3">
+        <img src="new1.jpg" alt="Gallery Photo 4">
+        <img src="sample11.jpg" alt="Gallery Photo 5">
+	<img src="new3.jpg" alt="Gallery Photo 5">
+	<img src="sample2.jpg" alt="Gallery Photo 5">
+	<img src="new4.jpg" alt="Gallery Photo 5">
+    </section>
+
+<h2>🎵Favorite Song</h2>
+<a href="https://youtu.be/mzX0rhF8buo?si=B6yvMvMDOupoa2Ir" target="_blank">🎶 Listen to Ariel’s Favorite Song</a>
+
+    <footer>
+        <p>Copyright by Irdina | IMD 318 Assignment | UiTM 2025</p>
+    </footer>
+
+</body>
+</html>
